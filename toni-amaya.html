@@ -190,6 +190,42 @@ body {
     z-index: 999;
 }
 .pdf-btn:hover { background: #22d3ee; transform: scale(1.05); }
+.share-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 195px;
+    background: #1e293b;
+    color: #f8fafc;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 999;
+    text-decoration: none;
+}
+.share-btn:hover { background: #0f172a; transform: scale(1.05); }
+.share-toast {
+    position: fixed;
+    bottom: 85px;
+    right: 195px;
+    background: #1e293b;
+    color: #06b6d4;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    border: 1px solid #06b6d4;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    pointer-events: none;
+}
 
 @media print {
     body { background: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -328,6 +364,26 @@ body {
 <a class="pdf-btn" href="toni-amaya.pdf" download="CV_Toni_Amaya_Dark.pdf">
     <i class="fas fa-file-pdf"></i> Descargar PDF
 </a>
+
+<button class="share-btn" onclick="compartir()">
+    <i class="fas fa-share-alt"></i> Compartir
+</button>
+<div class="share-toast" id="toast">¡Enlace copiado!</div>
+
+<script>
+async function compartir() {
+    const url = window.location.href;
+    const titulo = 'CV Toni Amaya Dimanuel';
+    if (navigator.share) {
+        await navigator.share({ title: titulo, url: url });
+    } else {
+        await navigator.clipboard.writeText(url);
+        const toast = document.getElementById('toast');
+        toast.style.opacity = '1';
+        setTimeout(() => toast.style.opacity = '0', 2000);
+    }
+}
+</script>
 
 
 </body>
