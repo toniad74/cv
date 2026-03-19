@@ -15,6 +15,8 @@ on:
 jobs:
   generate-pdfs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout del repositorio
@@ -38,9 +40,7 @@ jobs:
         run: node generate-pdfs.js
 
       - name: Subir PDFs al repositorio
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions Bot"
-          git add toniamaya.pdf toni-amaya.pdf
-          git diff --staged --quiet || git commit -m "Auto: actualizar PDFs generados"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto: actualizar PDFs generados"
+          file_pattern: "*.pdf"
