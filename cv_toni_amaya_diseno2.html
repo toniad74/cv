@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV Toni Amaya - Diseño Elegante</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    font-family: 'Georgia', serif; 
+    background: #e2e8f0; 
+    color: #334155; 
+    line-height: 1.5; 
+}
+.a4 { 
+    width: 210mm; 
+    height: 297mm; 
+    background: #fff; 
+    margin: 20px auto; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    display: flex; 
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; 
+}
+.header {
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 35px 35px 45px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-titles {
+    max-width: 65%;
+}
+.header-titles h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #f8fafc;
+}
+.header-titles .subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #cbd5e1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.contact-row {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 11px;
+    font-family: 'Arial', sans-serif;
+    color: #94a3b8;
+}
+.contact-row i { color: #38bdf8; margin-right: 5px; }
+
+.photo-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 35px;
+    right: 40px;
+}
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+}
+
+.body-container {
+    display: flex;
+    flex: 1;
+    padding: 25px 35px;
+    gap: 30px;
+}
+.main-col {
+    flex: 2;
+}
+.side-col {
+    flex: 1;
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-title:first-child { margin-top: 0; }
+
+.section-title-side {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #1e293b;
+    border-bottom: 1px solid #94a3b8;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    margin-top: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-title-side:first-child { margin-top: 0; }
+
+.profile-text {
+    font-size: 12.5px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.exp-item { margin-bottom: 15px; }
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+    font-family: 'Arial', sans-serif;
+}
+.exp-company {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0f172a;
+}
+.exp-date {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: bold;
+}
+.exp-desc {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.5;
+}
+.exp-desc-list {
+    font-size: 12px;
+    margin-left: 15px;
+    color: #475569;
+}
+.exp-desc-list li { margin-bottom: 3px; }
+
+ul.skills, ul.cert, ul.lang, ul.edu {
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+}
+ul.skills li, ul.cert li, ul.lang li, ul.edu li {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #334155;
+    line-height: 1.4;
+}
+ul.cert li {
+    padding-left: 12px;
+    position: relative;
+}
+ul.cert li::before {
+    content: "•";
+    color: #38bdf8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media print {
+    body { background: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .a4 { margin: 0; box-shadow: none; width: 210mm; height: 297mm; }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="a4">
+    <div class="header">
+        <div class="header-titles">
+            <h1>Toni Amaya Dimanuel</h1>
+            <div class="subtitle">Responsable Emisiones y Schedule Manager | Postproductor Audiovisual</div>
+            <div class="contact-row">
+                <span><i class="fas fa-envelope"></i> toniad74@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +34 609 289 436</span>
+                <span><i class="fas fa-map-marker-alt"></i> Barcelona</span>
+                <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/toni-amaya-dimanuel-b7195041" target="_blank" style="color:#94a3b8; text-decoration:none;">LinkedIn</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="photo-container">
+        <img src="foto_perfil.jpg" alt="Toni Amaya Dimanuel">
+    </div>
+
+    <div class="body-container">
+        <!-- Main Column -->
+        <div class="main-col">
+            <div class="section-title">Perfil Profesional</div>
+            <div class="profile-text">
+                Profesional audiovisual con más de 25 años de experiencia en televisión y broadcast. Especialista consolidado en la gestión técnica de canales, continuidad y planificación de emisiones (Responsable de Emisiones y Schedule Planner), respaldado por una sólida base técnica y creativa como editor y postproductor de vídeo. Perfil tecnológico y versátil que integra la amplia trayectoria televisiva con conocimientos prácticos en Inteligencia Artificial para optimizar procesos y contenidos visuales.
+            </div>
+
+            <div class="section-title">Experiencia Laboral</div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-company">GRUP MEDIAPRO</div>
+                    <div class="exp-date">may. 2012 - Actualidad</div>
+                </div>
+                <ul class="exp-desc-list">
+                    <li><strong>Responsable de Emisiones GolStadium</strong> (jul. 2024 - act.)</li>
+                    <li><strong>Schedule Planner:</strong> LaLiga TV Int., LaLiga TV BAR, LaLiga 123 TV, Canal F1 Latin America (nov. 2016 - jul. 2024)</li>
+                    <li><strong>Schedule Manager:</strong> OneSoccer (abr. 2019 - abr. 2020)</li>
+                    <li><strong>Broadcast Controller:</strong> ELEVEN SPORTS y FOX SPORTS EUROPE (dic. 2013 - nov. 2016)</li>
+                    <li><strong>Técnico / Coordinador de Continuidad:</strong> GOLT (may. 2012 - oct. 2013)</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-company">XARXA AUDIOVISUAL LOCAL (XAL)</div>
+                    <div class="exp-date">jul. 2011 - feb. 2012</div>
+                </div>
+                <div class="exp-desc">Técnico de Continuidad e Ingesta.</div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-company">TEUVE</div>
+                    <div class="exp-date">sept. 2007 - sept. 2010</div>
+                </div>
+                <div class="exp-desc">Técnico de Postproducción de vídeo y montaje de piezas en entornos AVID MediaComposer. Realizador técnico del sorteo de Loto 6/49 emitido en TV3.</div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-company">FUNITEC (LA SALLE) / BARCELONA TV</div>
+                    <div class="exp-date">feb. 2004 - sept. 2010</div>
+                </div>
+                <div class="exp-desc">Operador de cámara en plató para el programa central "LA TARDA" (BTV).</div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-company">MEDIAPARK S.A.</div>
+                    <div class="exp-date">may. 1998 - ago. 2007</div>
+                </div>
+                <div class="exp-desc">Técnico de Continuidad íntegra para 10 canales temáticos (Vía Digital), operando VTR para informativos (Tele5) y compaginándolo como Técnico de Postproducción (AVID).</div>
+            </div>
+        </div>
+
+        <!-- Side Column -->
+        <div class="side-col">
+            <div class="section-title-side">Aptitudes Clave</div>
+            <ul class="skills">
+                <li><strong>Producción y Emisión:</strong><br><span style="color:#64748b;">Broadcast, Continuidad, VTRs, Operativa EVS, vMix.</span></li>
+                <li><strong>Planificación:</strong><br><span style="color:#64748b;">Schedule Management y coordinación de canales internacionales.</span></li>
+                <li><strong>Edición y Postproducción:</strong><br><span style="color:#64748b;">Adobe Premiere, After Effects, Final Cut Pro, Avid MediaComposer, Photoshop.</span></li>
+                <li><strong>Inteligencia Artificial:</strong><br><span style="color:#64748b;">IAs generativas como apoyo creativo.</span></li>
+                <li><strong>RRSS y Streaming:</strong><br><span style="color:#64748b;">Gestión corporativa y directos del Club Handbol Molins (2020 - Actualidad).</span></li>
+            </ul>
+
+            <div class="section-title-side">Formación</div>
+            <ul class="edu">
+                <li><strong>Técnico Superior (Imagen y Sonido)</strong><br><span style="color:#64748b;">EMAV (1993 - 1994)</span></li>
+            </ul>
+
+            <div class="section-title-side">Certificaciones</div>
+            <ul class="cert">
+                <li>Final Cut Pro & Motion</li>
+                <li>Adobe Photoshop Avanzado</li>
+                <li>Nuevos Formatos de Vídeo</li>
+                <li>Tratamiento Digital Img y Sonido</li>
+                <li>3D MAX, Softimage y Cinema 4D</li>
+                <li>Operador EVS</li>
+                <li>Realización e Interpretación TV</li>
+            </ul>
+
+            <div class="section-title-side">Idiomas</div>
+            <ul class="lang">
+                <li><strong>Castellano:</strong> Nativo</li>
+                <li><strong>Catalán:</strong> Nativo</li>
+                <li><strong>Inglés:</strong> Intermedio</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
