@@ -8,6 +8,9 @@ on:
       - 'toni-amaya.html'
       - 'toniamaya-cat.html'
       - 'toni-amaya-cat.html'
+      - 'generate-pdfs.js'
+      - 'package.json'
+      - '.github/workflows/generate-pdf.yml'
 
 jobs:
   generate-pdfs:
