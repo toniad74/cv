@@ -21,9 +21,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+
+      - name: Cache Puppeteer (Chromium)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: Generar PDFs con Puppeteer
         run: node generate-pdfs.js
