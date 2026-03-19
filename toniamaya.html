@@ -256,8 +256,13 @@ h1 {
 .lang-btn:hover { background: #00a8cc; color: #fff; transform: scale(1.05); }
 
 @media (max-width: 800px) {
-    .lang-btn { top: 10px; right: 10px; padding: 6px 12px; font-size: 11px; border-width: 1px; }
+    .lang-btn { top: 10px; right: 10px; padding: 4px 10px; font-size: 11px; border-width: 1px; }
 }
+@media (max-width: 600px) {
+    .lang-text { display: none; }
+    .lang-short { display: inline; }
+}
+.lang-short { display: none; }
 
 /* Print optimizations */
 @media print {
@@ -316,7 +321,9 @@ h1 {
 </head>
 <body>
     <a href="toniamaya-cat.html" class="lang-btn">
-        <i class="fas fa-globe"></i> Versió en Català
+        <i class="fas fa-globe"></i> 
+        <span class="lang-text">Versió en Català</span>
+        <span class="lang-short">CAT</span>
     </a>
 
 <div class="a4">

@@ -259,8 +259,13 @@ body {
 .lang-btn:hover { background: #0f172a; transform: scale(1.05); }
 
 @media (max-width: 800px) {
-    .lang-btn { top: 10px; right: 10px; padding: 6px 12px; font-size: 12px; }
+    .lang-btn { top: 10px; right: 10px; padding: 4px 10px; font-size: 11px; }
 }
+@media (max-width: 600px) {
+    .lang-text { display: none; }
+    .lang-short { display: inline; }
+}
+.lang-short { display: none; }
 
 @media print {
     body { background: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -316,7 +321,9 @@ body {
 </head>
 <body>
     <a href="toni-amaya-cat.html" class="lang-btn">
-        <i class="fas fa-globe"></i> Versió en Català
+        <i class="fas fa-globe"></i> 
+        <span class="lang-text">Versió en Català</span>
+        <span class="lang-short">CAT</span>
     </a>
 
 <div class="a4">

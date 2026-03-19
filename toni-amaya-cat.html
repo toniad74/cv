@@ -309,8 +309,13 @@
         .lang-btn:hover { background: #0f172a; transform: scale(1.05); }
 
         @media (max-width: 800px) {
-            .lang-btn { top: 10px; right: 10px; padding: 6px 12px; font-size: 12px; }
+            .lang-btn { top: 10px; right: 10px; padding: 4px 10px; font-size: 11px; }
         }
+        @media (max-width: 600px) {
+            .lang-text { display: none; }
+            .lang-short { display: inline; }
+        }
+        .lang-short { display: none; }
 
         @media print {
             body {
@@ -421,7 +426,9 @@
 
 <body>
     <a href="toni-amaya.html" class="lang-btn">
-        <i class="fas fa-globe"></i> Versión en Castellano
+        <i class="fas fa-globe"></i> 
+        <span class="lang-text">Versión en Castellano</span>
+        <span class="lang-short">ESP</span>
     </a>
 
     <div class="a4">
