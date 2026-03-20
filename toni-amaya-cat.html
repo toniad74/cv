@@ -141,34 +141,38 @@
         }
 
         .tl-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2px;
-}
-.tl-date {
-    font-size: 11px;
-    color: #06b6d4;
-    font-weight: bold;
-}
-.tl-company {
-    font-size: 14px;
-    color: #f1f5f9;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.tl-title {
-    font-size: 13px;
-    color: #cbd5e1;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-.tl-desc {
-    font-size: 11.5px;
-    color: #94a3b8;
-    line-height: 1.5;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .tl-date {
+            font-size: 11px;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        .tl-company {
+            font-size: 14px;
+            color: #f1f5f9;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tl-title {
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tl-desc {
+            font-size: 11.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
 
         .tl-desc ul {
             margin-left: 0;
@@ -306,13 +310,34 @@
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-        .lang-btn:hover { background: #0f172a; transform: scale(1.05); }
+
+        .lang-btn:hover {
+            background: #0f172a;
+            transform: scale(1.05);
+        }
 
         @media (max-width: 800px) {
-            .lang-btn { top: 10px; right: 10px; padding: 4px 10px; font-size: 11px; }
-            .tl-header { flex-direction: column; gap: 0; }
-            .tl-company { line-height: 1.1; }
-            .tl-date { font-size: 11px; margin-top: -1px; line-height: 1.1; }
+            .lang-btn {
+                top: 10px;
+                right: 10px;
+                padding: 4px 10px;
+                font-size: 11px;
+            }
+
+            .tl-header {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .tl-company {
+                line-height: 1.1;
+            }
+
+            .tl-date {
+                font-size: 11px;
+                margin-top: -1px;
+                line-height: 1.1;
+            }
         }
 
         @media print {
@@ -336,10 +361,14 @@
             .share-btn {
                 display: none;
             }
+
             .lang-btn {
                 display: none;
             }
-            .modal { display: none !important; }
+
+            .modal {
+                display: none !important;
+            }
         }
 
         /* Modal Foto */
@@ -351,16 +380,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.95);
+            background: rgba(0, 0, 0, 0.95);
             justify-content: center;
             align-items: center;
             cursor: zoom-out;
         }
+
         .modal-img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
-            box-shadow: 0 0 40px rgba(6,182,212,0.6);
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
             border: 3px solid #06b6d4;
             cursor: default;
         }
@@ -409,10 +439,25 @@
             .contact-list {
                 font-size: 9px;
             }
-            .contact-list li { white-space: nowrap; }
-            .contact-list li.address-item { white-space: normal; }
-            .job-date { display: block; margin-top: 2px; font-size: 8px; color: #94a3b8; }
-            .mobile-br { display: block; }
+
+            .contact-list li {
+                white-space: nowrap;
+            }
+
+            .contact-list li.address-item {
+                white-space: normal;
+            }
+
+            .job-date {
+                display: block;
+                margin-top: 2px;
+                font-size: 8px;
+                color: #94a3b8;
+            }
+
+            .mobile-br {
+                display: block;
+            }
 
             .tl-title {
                 font-size: 11px;
@@ -463,9 +508,12 @@
             </div>
 
             <ul class="contact-list">
-                <li><i class="fas fa-envelope"></i> <a href="mailto:toniad74@gmail.com" style="color:inherit; text-decoration:none;">toniad74@gmail.com</a></li>
-                <li><i class="fas fa-mobile-alt"></i> <a href="tel:+34609289436" style="color:inherit; text-decoration:none;">+34 609 289 436</a></li>
-                <li class="address-item"><i class="fas fa-map-marker-alt"></i> Molins de Rei, <br class="mobile-br">Barcelona</li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:toniad74@gmail.com"
+                        style="color:inherit; text-decoration:none;">toniad74@gmail.com</a></li>
+                <li><i class="fas fa-mobile-alt"></i> <a href="tel:+34609289436"
+                        style="color:inherit; text-decoration:none;">+34 609 289 436</a></li>
+                <li class="address-item"><i class="fas fa-map-marker-alt"></i> Molins de Rei, <br
+                        class="mobile-br">Barcelona</li>
                 <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/toni-amaya-dimanuel-b7195041"
                         target="_blank" style="color:inherit; text-decoration:none;">LinkedIn</a></li>
             </ul>
@@ -539,16 +587,26 @@
 
                 <div class="tl-desc">
                     <ul>
-                        <li><strong>Responsable Emissions GolStadium:</strong> <span class="job-date">jul. 2024 - act.</span></li>
-                        <li><strong>Schedule Planner LaLiga TV Int. &amp; LaLiga TV BAR:</strong> <span class="job-date">abr. 2020 - jul. 2024</span></li>
-                        <li><strong>Schedule Manager OneSoccer:</strong> <span class="job-date">abr. 2019 - abr. 2020</span></li>
-                        <li><strong>Schedule Planner LaLiga 123 TV:</strong> <span class="job-date">gen. 2018 - ago. 2019</span></li>
-                        <li><strong>Schedule Planner Canal F1 Latin America:</strong> <span class="job-date">nov. 2016 - gen. 2018</span></li>
-                        <li><strong>Broadcast controller ELEVEN SPORTS NETWORK:</strong> <span class="job-date">jul. 2015 - nov. 2016</span></li>
-                        <li><strong>Broadcast controller FOX SPORTS EUROPE:</strong> <span class="job-date">des. 2013 - jul. 2015</span></li>
-                        <li><strong>Tècnic de continuïtat a GOLT:</strong> <span class="job-date">abr. 2013 - oct. 2013</span></li>
-                        <li><strong>Coordinador d'emissions a GOLT:</strong> <span class="job-date">nov. 2012 - des. 2012</span></li>
-                        <li><strong>Tècnic de continuïtat a GOLT:</strong> <span class="job-date">maig 2012 - oct. 2012</span></li>
+                        <li><strong>Responsable Emissions GolStadium:</strong> <span class="job-date">jul. 2024 -
+                                act.</span></li>
+                        <li><strong>Schedule Planner LaLiga TV Int. &amp; LaLiga TV BAR:</strong> <span
+                                class="job-date">abr. 2020 - jul. 2024</span></li>
+                        <li><strong>Schedule Manager OneSoccer:</strong> <span class="job-date">abr. 2019 - abr.
+                                2020</span></li>
+                        <li><strong>Schedule Planner LaLiga 123 TV:</strong> <span class="job-date">gen. 2018 - ago.
+                                2019</span></li>
+                        <li><strong>Schedule Planner Canal F1 Latin America:</strong> <span class="job-date">nov. 2016 -
+                                gen. 2018</span></li>
+                        <li><strong>Broadcast controller ELEVEN SPORTS NETWORK:</strong> <span class="job-date">jul.
+                                2015 - nov. 2016</span></li>
+                        <li><strong>Broadcast controller FOX SPORTS EUROPE:</strong> <span class="job-date">des. 2013 -
+                                jul. 2015</span></li>
+                        <li><strong>Tècnic de continuïtat a GOLT:</strong> <span class="job-date">abr. 2013 - oct.
+                                2013</span></li>
+                        <li><strong>Coordinador d'emissions a GOLT:</strong> <span class="job-date">nov. 2012 - des.
+                                2012</span></li>
+                        <li><strong>Tècnic de continuïtat a GOLT:</strong> <span class="job-date">maig 2012 - oct.
+                                2012</span></li>
                     </ul>
                 </div>
             </div>
@@ -606,29 +664,30 @@
                     <div class="tl-company">MEDIAPARK S.A.</div>
                     <div class="tl-date">maig 1998 - ago. 2007</div>
                 </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Tècnic de Postproducció de vídeo en AVID MEDIACOMPOSER:</strong> especialització en fluxos de treball broadcast.</li>
-                    <li><strong>Tècnic de Continuïtat:</strong> de 10 canals temàtics per a VÍA DIGITAL.</li>
-                    <li><strong>Operador de Canvi de Formats i VTRs:</strong> per a informatius de TELE5.</li>
-                </ul>
-            </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Tècnic de Postproducció de vídeo en AVID MEDIACOMPOSER:</strong> especialització en
+                            fluxos de treball broadcast.</li>
+                        <li><strong>Operador de Canvi de Formats i VTRs:</strong> per a informatius de TELE5.</li>
+                        <li><strong>Tècnic de Continuïtat:</strong> de 10 canals temàtics per a VÍA DIGITAL.</li>
+                    </ul>
+                </div>
             </div>
 
-        <div class="section-head" style="margin-top:25px;">Certificacions<br>Complementàries</div>
-        <div class="tags" style="margin-top:10px;">
-            <span class="tag">Final Cut Pro & Motion</span>
-            <span class="tag">Adobe Photoshop Avançat</span>
-            <span class="tag">Postproducció de Vídeo Online</span>
-            <span class="tag">Nous Formats de Vídeo</span>
-            <span class="tag">Tractament Digital Img i So</span>
-            <span class="tag">3D MAX, Softimage i Cinema 4D</span>
-            <span class="tag">Operador EVS</span>
-            <span class="tag">Realització i Interpretació TV</span>
+            <div class="section-head" style="margin-top:25px;">Certificacions<br>Complementàries</div>
+            <div class="tags" style="margin-top:10px;">
+                <span class="tag">Final Cut Pro & Motion</span>
+                <span class="tag">Adobe Photoshop Avançat</span>
+                <span class="tag">Postproducció de Vídeo Online</span>
+                <span class="tag">Nous Formats de Vídeo</span>
+                <span class="tag">Tractament Digital Img i So</span>
+                <span class="tag">3D MAX, Softimage i Cinema 4D</span>
+                <span class="tag">Operador EVS</span>
+                <span class="tag">Realització i Interpretació TV</span>
+            </div>
+
         </div>
-
     </div>
-</div>
 
     <a class="pdf-btn" href="toni-amaya-cat.pdf" download="CV_Toni_Amaya_Dark_CAT.pdf">
         <i class="fas fa-file-pdf"></i> Descarregar PDF
