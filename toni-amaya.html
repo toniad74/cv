@@ -1,553 +1,724 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV Toni Amaya - Diseño Dark Tech</title>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0f172a; 
-    color: #e2e8f0; 
-    line-height: 1.4; 
-}
-.a4 { 
-    width: 210mm; 
-    height: 297mm; 
-    background: #0b1120; 
-    margin: 20px auto; 
-    box-shadow: 0 0 20px rgba(0,255,255,0.1); 
-    display: flex;
-    overflow: hidden; 
-}
-.left-sidebar {
-    width: 35%;
-    background: #1e293b;
-    padding: 30px 30px 60px 30px;
-    border-right: 2px solid #06b6d4;
-    display: flex;
-    flex-direction: column;
-}
-.main-content {
-    width: 65%;
-    padding: 35px 40px 60px 40px;
-    display: flex;
-    flex-direction: column;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Toni Amaya - Diseño Dark Tech</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.photo-area {
-    text-align: center;
-    margin-bottom: 25px;
-}
-.photo-area img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    object-position: center 15%;
-    border-radius: 20px;
-    border: 3px solid #06b6d4;
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.4;
+        }
 
-.name-header h1 {
-    font-size: 32px;
-    color: #f8fafc;
-    letter-spacing: -0.5px;
-    text-transform: uppercase;
-    line-height: 1.1;
-}
-.name-header .subtitle {
-    font-size: 14px;
-    color: #06b6d4;
-    font-weight: 500;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-.contact-list {
-    list-style: none;
-    font-size: 12px;
-    color: #94a3b8;
-    margin-bottom: 30px;
-}
-.contact-list li { margin-bottom: 8px; display: flex; align-items: flex-start; }
-.contact-list i { color: #06b6d4; width: 20px; font-size: 14px; margin-top: 3px; }
+        .a4 {
+            width: 210mm;
+            height: 297mm;
+            background: #0b1120;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
 
-.section-head {
-    font-size: 14px;
-    color: #f8fafc;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-.section-head::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, #06b6d4, transparent);
-    margin-left: 10px;
-}
-.section-head:first-child { margin-top: 0; }
+        .left-sidebar {
+            width: 35%;
+            background: #1e293b;
+            padding: 30px 30px 60px 30px;
+            border-right: 2px solid #06b6d4;
+            display: flex;
+            flex-direction: column;
+        }
 
-.timeline-item {
-    margin-bottom: 15px;
-    padding-left: 15px;
-    border-left: 2px solid #334155;
-    position: relative;
-}
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -6px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    background: #06b6d4;
-    border-radius: 50%;
-}
-.tl-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2px;
-}
-.tl-date {
-    font-size: 11px;
-    color: #06b6d4;
-    font-weight: bold;
-}
-.tl-company {
-    font-size: 14px;
-    color: #f1f5f9;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.tl-title {
-    font-size: 13px;
-    color: #cbd5e1;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-.tl-desc {
-    font-size: 11.5px;
-    color: #94a3b8;
-    line-height: 1.5;
-}
-.tl-desc ul { margin-left: 0; margin-top: 3px; padding-left: 1.2rem; }
-.tl-desc li { margin-bottom: 2px; }
+        .main-content {
+            width: 65%;
+            padding: 35px 40px 60px 40px;
+            display: flex;
+            flex-direction: column;
+        }
 
-.profile-txt {
-    font-size: 12.5px;
-    color: #94a3b8;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    text-align: justify;
-}
+        .photo-area {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-.skill-box {
-    margin-bottom: 12px;
-}
-.sb-title {
-    font-size: 12px;
-    color: #f1f5f9;
-    font-weight: bold;
-    margin-bottom: 2px;
-}
-.sb-desc {
-    font-size: 11px;
-    color: #64748b;
-}
+        .photo-area img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center 15%;
+            border-radius: 20px;
+            border: 3px solid #06b6d4;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-.tag {
-    background: #334155;
-    color: #cbd5e1;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-}
+        .name-header h1 {
+            font-size: 32px;
+            color: #f8fafc;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
 
-/* Botón PDF */
-.pdf-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #06b6d4;
-    color: #0b1120;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 22px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(6,182,212,0.5);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s, transform 0.2s;
-    z-index: 999;
-}
-.pdf-btn:hover { background: #22d3ee; transform: scale(1.05); }
-.share-btn {
-    position: fixed;
-    bottom: 85px;
-    right: 30px;
-    background: #1e293b;
-    color: #f8fafc;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 22px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s, transform 0.2s;
-    z-index: 999;
-    text-decoration: none;
-}
-.share-btn:hover { background: #0f172a; transform: scale(1.05); }
-.share-toast {
-    position: fixed;
-    bottom: 140px;
-    right: 30px;
-    background: #1e293b;
-    color: #06b6d4;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    border: 1px solid #06b6d4;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1000;
-    pointer-events: none;
-}
+        .name-header .subtitle {
+            font-size: 14px;
+            color: #06b6d4;
+            font-weight: 500;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
 
-.lang-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #1e293b;
-    color: #06b6d4;
-    border: 1px solid #06b6d4;
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 1001;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-.lang-btn:hover { background: #0f172a; transform: scale(1.05); }
+        .contact-list {
+            list-style: none;
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
 
-@media (max-width: 800px) {
-    .lang-btn { top: 10px; right: 10px; padding: 4px 10px; font-size: 11px; }
-    .tl-header { flex-direction: column; gap: 0; }
-    .tl-company { line-height: 1.1; }
-    .tl-date { font-size: 11px; margin-top: -1px; line-height: 1.1; }
-}
+        .contact-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
 
-@media print {
-    body { background: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .a4 { margin: 0; box-shadow: none; width: 210mm; height: 297mm; }
-    .pdf-btn { display: none; }
-    .share-btn { display: none; }
-    .lang-btn { display: none; }
-    .modal { display: none !important; }
-}
+        .contact-list i {
+            color: #06b6d4;
+            width: 20px;
+            font-size: 14px;
+            margin-top: 3px;
+        }
 
-/* Modal Foto */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    cursor: zoom-out;
-}
-.modal-img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(6,182,212,0.6);
-    border: 3px solid #06b6d4;
-    cursor: default;
-}
+        .section-head {
+            font-size: 14px;
+            color: #f8fafc;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
 
-/* Mobile adjustments */
-@media screen and (max-width: 800px) {
-    body { padding: 10px; background: #0f172a; }
-    .a4 { 
-        width: 100%; 
-        height: auto; 
-        margin: 0 auto 20px auto; 
-        box-shadow: none; 
-        display: flex;
-        flex-direction: row; 
-    }
-    .left-sidebar { width: 35%; padding: 15px; border-right: 2px solid #06b6d4; }
-    .main-content { width: 65%; padding: 15px 20px; }
-    
-    /* Ajustes escala dark móvil */
-    .name-header h1 { font-size: 20px; }
-    .name-header .subtitle { font-size: 10px; }
-    .profile-txt, .tl-desc, .tl-company, .sb-desc, .contact-list { font-size: 9px; }
-    .contact-list li { white-space: nowrap; }
-    .contact-list li.address-item { white-space: normal; }
-    .job-date { display: block; margin-top: 2px; font-size: 8px; color: #94a3b8; }
-    .mobile-br { display: block; }
-    .tl-title { font-size: 11px; }
-    .photo-area img { width: 80px; height: 80px; }
-    .section-head { font-size: 11px; margin-top: 15px; }
+        .section-head::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, #06b6d4, transparent);
+            margin-left: 10px;
+        }
 
-    .pdf-btn, .share-btn {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin: 15px auto;
-        width: 240px;
-        justify-content: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-        display: flex;
-    }
-    .share-toast {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 80px;
-    }
-}
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        .section-head:first-child {
+            margin-top: 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 2px solid #334155;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #06b6d4;
+            border-radius: 50%;
+        }
+
+        .tl-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .tl-date {
+            font-size: 11px;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        .tl-company {
+            font-size: 14px;
+            color: #f1f5f9;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tl-title {
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .tl-desc {
+            font-size: 11.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .tl-desc ul {
+            margin-left: 0;
+            margin-top: 3px;
+            padding-left: 1.2rem;
+        }
+
+        .tl-desc li {
+            margin-bottom: 2px;
+        }
+
+        .profile-txt {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .skill-box {
+            margin-bottom: 12px;
+        }
+
+        .sb-title {
+            font-size: 12px;
+            color: #f1f5f9;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .sb-desc {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: #334155;
+            color: #cbd5e1;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        /* Botón PDF */
+        .pdf-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #06b6d4;
+            color: #0b1120;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 999;
+        }
+
+        .pdf-btn:hover {
+            background: #22d3ee;
+            transform: scale(1.05);
+        }
+
+        .share-btn {
+            position: fixed;
+            bottom: 85px;
+            right: 30px;
+            background: #1e293b;
+            color: #f8fafc;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .share-btn:hover {
+            background: #0f172a;
+            transform: scale(1.05);
+        }
+
+        .share-toast {
+            position: fixed;
+            bottom: 140px;
+            right: 30px;
+            background: #1e293b;
+            color: #06b6d4;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            border: 1px solid #06b6d4;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .lang-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1e293b;
+            color: #06b6d4;
+            border: 1px solid #06b6d4;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-btn:hover {
+            background: #0f172a;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 800px) {
+            .lang-btn {
+                top: 10px;
+                right: 10px;
+                padding: 4px 10px;
+                font-size: 11px;
+            }
+
+            .tl-header {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .tl-company {
+                line-height: 1.1;
+            }
+
+            .tl-date {
+                font-size: 11px;
+                margin-top: -1px;
+                line-height: 1.1;
+            }
+        }
+
+        @media print {
+            body {
+                background: none;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .a4 {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .pdf-btn {
+                display: none;
+            }
+
+            .share-btn {
+                display: none;
+            }
+
+            .lang-btn {
+                display: none;
+            }
+
+            .modal {
+                display: none !important;
+            }
+        }
+
+        /* Modal Foto */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        .modal-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+            border: 3px solid #06b6d4;
+            cursor: default;
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 800px) {
+            body {
+                padding: 10px;
+                background: #0f172a;
+            }
+
+            .a4 {
+                width: 100%;
+                height: auto;
+                margin: 0 auto 20px auto;
+                box-shadow: none;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .left-sidebar {
+                width: 35%;
+                padding: 15px;
+                border-right: 2px solid #06b6d4;
+            }
+
+            .main-content {
+                width: 65%;
+                padding: 15px 20px;
+            }
+
+            /* Ajustes escala dark móvil */
+            .name-header h1 {
+                font-size: 20px;
+            }
+
+            .name-header .subtitle {
+                font-size: 10px;
+            }
+
+            .profile-txt,
+            .tl-desc,
+            .tl-company,
+            .sb-desc,
+            .contact-list {
+                font-size: 9px;
+            }
+
+            .contact-list li {
+                white-space: nowrap;
+            }
+
+            .contact-list li.address-item {
+                white-space: normal;
+            }
+
+            .job-date {
+                display: block;
+                margin-top: 2px;
+                font-size: 8px;
+                color: #94a3b8;
+            }
+
+            .mobile-br {
+                display: block;
+            }
+
+            .tl-title {
+                font-size: 11px;
+            }
+
+            .photo-area img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .section-head {
+                font-size: 11px;
+                margin-top: 15px;
+            }
+
+            .pdf-btn,
+            .share-btn {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin: 15px auto;
+                width: 240px;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+                display: flex;
+            }
+
+            .share-toast {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 80px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <a href="toni-amaya-cat.html" class="lang-btn">
         <i class="fas fa-globe"></i> CAT
     </a>
 
-<div class="a4">
-    <!-- LEFT SIDEBAR -->
-    <div class="left-sidebar">
-        <div class="photo-area">
-            <img src="foto_perfil.jpg" alt="Toni Amaya Dimanuel" onclick="abrirFoto()" style="cursor:zoom-in;">
-        </div>
-        
-        <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> <a href="mailto:toniad74@gmail.com" style="color:inherit; text-decoration:none;">toniad74@gmail.com</a></li>
-            <li><i class="fas fa-mobile-alt"></i> <a href="tel:+34609289436" style="color:inherit; text-decoration:none;">+34 609 289 436</a></li>
-            <li class="address-item"><i class="fas fa-map-marker-alt"></i> Molins de Rei, <br class="mobile-br">Barcelona</li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/toni-amaya-dimanuel-b7195041" target="_blank" style="color:inherit; text-decoration:none;">LinkedIn</a></li>
-        </ul>
+    <div class="a4">
+        <!-- LEFT SIDEBAR -->
+        <div class="left-sidebar">
+            <div class="photo-area">
+                <img src="foto_perfil.jpg" alt="Toni Amaya Dimanuel" onclick="abrirFoto()" style="cursor:zoom-in;">
+            </div>
 
-        <div class="section-head">Skills & Tech</div>
-        
-        <div class="skill-box">
-            <div class="sb-title">Producción y Emisión</div>
-            <div class="sb-desc">Broadcast, Continuidad, VTRs, Operativa EVS, vMix.</div>
-        </div>
-        <div class="skill-box">
-            <div class="sb-title">Planificación Broadcast</div>
-            <div class="sb-desc">Schedule Management y coordinación de emisiones.</div>
-        </div>
-        <div class="skill-box">
-            <div class="sb-title">Postproducción de Vídeo</div>
-            <div class="sb-desc">Adobe Premiere, After Effects, FCP, Avid, Photoshop.</div>
-        </div>
-        <div class="skill-box">
-            <div class="sb-title">Innovación</div>
-            <div class="sb-desc">IAs generativas, RRSS, Streaming (Club Handbol Molins)</div>
+            <ul class="contact-list">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:toniad74@gmail.com"
+                        style="color:inherit; text-decoration:none;">toniad74@gmail.com</a></li>
+                <li><i class="fas fa-mobile-alt"></i> <a href="tel:+34609289436"
+                        style="color:inherit; text-decoration:none;">+34 609 289 436</a></li>
+                <li class="address-item"><i class="fas fa-map-marker-alt"></i> Molins de Rei, <br
+                        class="mobile-br">Barcelona</li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/toni-amaya-dimanuel-b7195041"
+                        target="_blank" style="color:inherit; text-decoration:none;">LinkedIn</a></li>
+            </ul>
+
+            <div class="section-head">Skills & Tech</div>
+
+            <div class="skill-box">
+                <div class="sb-title">Producción y Emisión</div>
+                <div class="sb-desc">Broadcast, Continuidad, VTRs, Operativa EVS, vMix.</div>
+            </div>
+            <div class="skill-box">
+                <div class="sb-title">Planificación Broadcast</div>
+                <div class="sb-desc">Schedule Management y coordinación de emisiones.</div>
+            </div>
+            <div class="skill-box">
+                <div class="sb-title">Postproducción de Vídeo</div>
+                <div class="sb-desc">Adobe Premiere, After Effects, FCP, Avid, Photoshop.</div>
+            </div>
+            <div class="skill-box">
+                <div class="sb-title">Innovación</div>
+                <div class="sb-desc">IAs generativas, RRSS, Streaming (Club Handbol Molins)</div>
+            </div>
+
+            <div class="section-head">Formación</div>
+            <div class="skill-box">
+                <div class="sb-title">Técnico Superior Imagen y Sonido</div>
+                <div class="sb-desc">EMAV (1993 - 1994)</div>
+            </div>
+
+            <div class="section-head">Idiomas</div>
+            <div class="tags">
+                <span class="tag">Castellano (Nativo)</span>
+                <span class="tag">Catalán (Nativo)</span>
+                <span class="tag">Inglés (Intermedio)</span>
+            </div>
+
+            <div class="section-head" style="margin-top:20px;">Tool Stack</div>
+            <div class="tags">
+                <span class="tag">AVID</span>
+                <span class="tag">Premiere</span>
+                <span class="tag">Photoshop</span>
+                <span class="tag">vMix</span>
+                <span class="tag">EVS</span>
+                <span class="tag">GenAI</span>
+                <span class="tag">3D Studio</span>
+            </div>
         </div>
 
-        <div class="section-head">Formación</div>
-        <div class="skill-box">
-            <div class="sb-title">Técnico Superior Imagen y Sonido</div>
-            <div class="sb-desc">EMAV (1993 - 1994)</div>
-        </div>
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="name-header">
+                <h1>Toni Amaya Dimanuel</h1>
+                <div class="subtitle">Responsable Emisiones & Schedule Manager | Postproductor</div>
+            </div>
 
-        <div class="section-head">Idiomas</div>
-        <div class="tags">
-            <span class="tag">Castellano (Nativo)</span>
-            <span class="tag">Catalán (Nativo)</span>
-            <span class="tag">Inglés (Intermedio)</span>
-        </div>
-        
-        <div class="section-head" style="margin-top:20px;">Tool Stack</div>
-        <div class="tags">
-            <span class="tag">AVID</span>
-            <span class="tag">Premiere</span>
-            <span class="tag">Photoshop</span>
-            <span class="tag">vMix</span>
-            <span class="tag">EVS</span>
-            <span class="tag">GenAI</span>
-            <span class="tag">3D Studio</span>
+            <div class="profile-txt">
+                Profesional audiovisual con más de 25 años de experiencia en televisión y broadcast. Especialista
+                consolidado en la gestión técnica de canales, continuidad y planificación de emisiones (Responsable de
+                Emisiones y Schedule Planner), respaldado por una sólida base técnica y creativa como editor y
+                postproductor de vídeo. Perfil tecnológico y versátil que integra la amplia trayectoria televisiva con
+                conocimientos prácticos en Inteligencia Artificial para optimizar procesos y contenidos visuales.
+            </div>
+
+            <div class="section-head">Experiencia Profesional</div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">GRUP MEDIAPRO</div>
+                    <div class="tl-date">may. 2012 - Actualidad</div>
+                </div>
+
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Responsable emisiones GolStadium:</strong> <span class="job-date">jul. 2024 -
+                                may. 2026</span></li>
+                        <li><strong>Schedule Planner LaLiga TV Int. &amp; LaLiga TV BAR:</strong> <span
+                                class="job-date">abr. 2020 - jul. 2024</span></li>
+                        <li><strong>Schedule Manager OneSoccer:</strong> <span class="job-date">abr. 2019 - abr.
+                                2020</span></li>
+                        <li><strong>Schedule Planner LaLiga 123 TV:</strong> <span class="job-date">ene. 2018 - ago.
+                                2019</span></li>
+                        <li><strong>Schedule Planner Canal F1 Latin America:</strong> <span class="job-date">nov. 2016 -
+                                ene. 2018</span></li>
+                        <li><strong>Broadcast controller ELEVEN SPORTS NETWORK:</strong> <span class="job-date">jul.
+                                2015 - nov. 2016</span></li>
+                        <li><strong>Broadcast controller FOX SPORTS EUROPE:</strong> <span class="job-date">dic. 2013 -
+                                jul. 2015</span></li>
+                        <li><strong>Técnico de continuidad en GOLT:</strong> <span class="job-date">abr. 2013 - oct.
+                                2013</span></li>
+                        <li><strong>Coordinador de emisiones en GOLT:</strong> <span class="job-date">nov. 2012 - dic.
+                                2012</span></li>
+                        <li><strong>Técnico de continuidad en GOLT:</strong> <span class="job-date">mayo 2012 - oct.
+                                2012</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">Xarxa Audiovisual Local (XAL)</div>
+                    <div class="tl-date">jul. 2011 - feb. 2012</div>
+                </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Técnico de Continuidad e Ingesta</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">TEUVE</div>
+                    <div class="tl-date">sept. 2007 - sept. 2010</div>
+                </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Técnico de Postproducción de video</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">FUNITEC (LA SALLE)</div>
+                    <div class="tl-date">feb. 2004 - sept. 2010</div>
+                </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Realizador sorteo Loto 6/49 (TV3)</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">BARCELONA TV (betevé)</div>
+                    <div class="tl-date">ene. 2006 - ago. 2007</div>
+                </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Operador de cámara (Programa "LA TARDA")</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="tl-header">
+                    <div class="tl-company">MEDIAPARK S.A.</div>
+                    <div class="tl-date">may. 1998 - ago. 2007</div>
+                </div>
+                <div class="tl-desc">
+                    <ul>
+                        <li><strong>Técnico de Postproducción de video:</strong> jun. 2006 - ago. 2007</li>
+                        <li><strong>Técnico de Cambio de Formatos y VTRs para TELE5:</strong> jun. 1999 - jun. 2006</li>
+                        <li><strong>Técnico de Continuidad para VÍA DIGITAL:</strong> may. 1998 - jun. 1999</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-head" style="margin-top:25px;">Certificaciones<br>Complementarias</div>
+            <div class="tags" style="margin-top:10px;">
+                <span class="tag">Final Cut Pro & Motion</span>
+                <span class="tag">Adobe Photoshop Avanzado</span>
+                <span class="tag">Postproducción de Vídeo Online</span>
+                <span class="tag">Nuevos Formatos de Vídeo</span>
+                <span class="tag">Tratamiento Digital Img y Sonido</span>
+                <span class="tag">3D MAX, Softimage y Cinema 4D</span>
+                <span class="tag">Operador EVS</span>
+                <span class="tag">Realización e Interpretación TV</span>
+            </div>
+
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-        <div class="name-header">
-            <h1>Toni Amaya Dimanuel</h1>
-            <div class="subtitle">Responsable Emisiones & Schedule Manager | Postproductor</div>
-        </div>
+    <a class="pdf-btn" href="toni-amaya.pdf" download="CV_Toni_Amaya_Dark.pdf">
+        <i class="fas fa-file-pdf"></i> Descargar PDF
+    </a>
 
-        <div class="profile-txt">
-            Profesional audiovisual con más de 25 años de experiencia en televisión y broadcast. Especialista consolidado en la gestión técnica de canales, continuidad y planificación de emisiones (Responsable de Emisiones y Schedule Planner), respaldado por una sólida base técnica y creativa como editor y postproductor de vídeo. Perfil tecnológico y versátil que integra la amplia trayectoria televisiva con conocimientos prácticos en Inteligencia Artificial para optimizar procesos y contenidos visuales.
-        </div>
+    <button class="share-btn" onclick="compartir()">
+        <i class="fas fa-share-alt"></i> Compartir
+    </button>
+    <div class="share-toast" id="toast">¡Enlace copiado!</div>
 
-        <div class="section-head">Experiencia Profesional</div>
-        
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">GRUP MEDIAPRO</div>
-                <div class="tl-date">may. 2012 - Actualidad</div>
-            </div>
-
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Responsable emisiones GolStadium:</strong> <span class="job-date">jul. 2024 - mayo 2026</span></li>
-                    <li><strong>Schedule Planner LaLiga TV Int. &amp; LaLiga TV BAR:</strong> <span class="job-date">abr. 2020 - jul. 2024</span></li>
-                    <li><strong>Schedule Manager OneSoccer:</strong> <span class="job-date">abr. 2019 - abr. 2020</span></li>
-                    <li><strong>Schedule Planner LaLiga 123 TV:</strong> <span class="job-date">ene. 2018 - ago. 2019</span></li>
-                    <li><strong>Schedule Planner Canal F1 Latin America:</strong> <span class="job-date">nov. 2016 - ene. 2018</span></li>
-                    <li><strong>Broadcast controller ELEVEN SPORTS NETWORK:</strong> <span class="job-date">jul. 2015 - nov. 2016</span></li>
-                    <li><strong>Broadcast controller FOX SPORTS EUROPE:</strong> <span class="job-date">dic. 2013 - jul. 2015</span></li>
-                    <li><strong>Técnico de continuidad en GOLT:</strong> <span class="job-date">abr. 2013 - oct. 2013</span></li>
-                    <li><strong>Coordinador de emisiones en GOLT:</strong> <span class="job-date">nov. 2012 - dic. 2012</span></li>
-                    <li><strong>Técnico de continuidad en GOLT:</strong> <span class="job-date">mayo 2012 - oct. 2012</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">Xarxa Audiovisual Local (XAL)</div>
-                <div class="tl-date">jul. 2011 - feb. 2012</div>
-            </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Técnico de Continuidad e Ingesta</strong></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">TEUVE</div>
-                <div class="tl-date">sept. 2007 - sept. 2010</div>
-            </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Técnico de Postproducción de video</strong></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">FUNITEC (LA SALLE)</div>
-                <div class="tl-date">feb. 2004 - sept. 2010</div>
-            </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Realizador sorteo Loto 6/49 (TV3)</strong></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">BARCELONA TV (betevé)</div>
-                <div class="tl-date">ene. 2006 - ago. 2007</div>
-            </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Operador de cámara (Programa "LA TARDA")</strong></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="tl-header">
-                <div class="tl-company">MEDIAPARK S.A.</div>
-                <div class="tl-date">may. 1998 - ago. 2007</div>
-            </div>
-            <div class="tl-desc">
-                <ul>
-                    <li><strong>Técnico de Postproducción de video:</strong> jun. 2006 - ago. 2007</li>
-                    <li><strong>Técnico de Cambio de Formatos y VTRs para TELE5:</strong> jun. 1999 - jun. 2006</li>
-                    <li><strong>Técnico de Continuidad para VÍA DIGITAL:</strong> may. 1998 - jun. 1999</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section-head" style="margin-top:25px;">Certificaciones<br>Complementarias</div>
-        <div class="tags" style="margin-top:10px;">
-            <span class="tag">Final Cut Pro & Motion</span>
-            <span class="tag">Adobe Photoshop Avanzado</span>
-            <span class="tag">Postproducción de Vídeo Online</span>
-            <span class="tag">Nuevos Formatos de Vídeo</span>
-            <span class="tag">Tratamiento Digital Img y Sonido</span>
-            <span class="tag">3D MAX, Softimage y Cinema 4D</span>
-            <span class="tag">Operador EVS</span>
-            <span class="tag">Realización e Interpretación TV</span>
-        </div>
-
+    <div class="modal" id="modalFoto" onclick="cerrarFoto()">
+        <img src="foto_perfil.jpg" alt="Toni Amaya Dimanuel" class="modal-img" onclick="event.stopPropagation()">
     </div>
-</div>
 
-<a class="pdf-btn" href="toni-amaya.pdf" download="CV_Toni_Amaya_Dark.pdf">
-    <i class="fas fa-file-pdf"></i> Descargar PDF
-</a>
+    <script>
+        function abrirFoto() { document.getElementById('modalFoto').style.display = 'flex'; }
+        function cerrarFoto() { document.getElementById('modalFoto').style.display = 'none'; }
 
-<button class="share-btn" onclick="compartir()">
-    <i class="fas fa-share-alt"></i> Compartir
-</button>
-<div class="share-toast" id="toast">¡Enlace copiado!</div>
-
-<div class="modal" id="modalFoto" onclick="cerrarFoto()">
-    <img src="foto_perfil.jpg" alt="Toni Amaya Dimanuel" class="modal-img" onclick="event.stopPropagation()">
-</div>
-
-<script>
-function abrirFoto() { document.getElementById('modalFoto').style.display = 'flex'; }
-function cerrarFoto() { document.getElementById('modalFoto').style.display = 'none'; }
-
-async function compartir() {
-    const url = window.location.href;
-    const titulo = 'CV Toni Amaya Dimanuel';
-    if (navigator.share) {
-        await navigator.share({ title: titulo, url: url });
-    } else {
-        await navigator.clipboard.writeText(url);
-        const toast = document.getElementById('toast');
-        toast.style.opacity = '1';
-        setTimeout(() => toast.style.opacity = '0', 2000);
-    }
-}
-</script>
+        async function compartir() {
+            const url = window.location.href;
+            const titulo = 'CV Toni Amaya Dimanuel';
+            if (navigator.share) {
+                await navigator.share({ title: titulo, url: url });
+            } else {
+                await navigator.clipboard.writeText(url);
+                const toast = document.getElementById('toast');
+                toast.style.opacity = '1';
+                setTimeout(() => toast.style.opacity = '0', 2000);
+            }
+        }
+    </script>
 
 
 </body>
+
 </html>
