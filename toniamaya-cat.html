@@ -309,7 +309,7 @@
             transform: scale(1.05);
         }
 
-        @media (max-width: 800px) {
+        @media screen and (max-width: 800px) {
             .lang-btn {
                 top: 10px;
                 right: 10px;
@@ -365,6 +365,18 @@
 
             .modal {
                 display: none !important;
+            }
+
+            .exp-header {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: baseline !important;
+            }
+
+            .exp-date {
+                display: block !important;
+                margin-top: 0 !important;
             }
         }
 
